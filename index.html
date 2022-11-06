@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        .sidebar{
+            width: 345px;
+            position: fixed;
+           height: 100%;
+           background:rgb(40, 38, 138);
+           left: 0%;
+           top: 0%;
+        }
+        .main-content{
+            margin-left: 345px;
+        }
+        .sidebar-brand{
+            height: 90px;
+            padding: 1rem 0rem 1rem 2rem;
+            color: white;
+        }
+        .sidebar-brand span{
+            display: inline-block;
+            padding-right: 1rem;
+        }
+        .sidebar-menu li{
+            width: 100%;
+            margin-bottom: 1.3rem;
+            padding-left: 1rem;
+
+        }
+        .sidebar-menu a{
+            padding-left: 1rem;
+            display: block;
+            color: white;
+            font-size: 1.1rem;
+        }
+        .sidebar-menu a span{
+            font-size: 1.5rem;
+            padding-right: 1rem;
+        }
+        .sidebar-menu a.active {
+            background: #fff;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: pink;
+            border-radius: 30px 0px 0px 30px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            box-shadow: 4px 4px 10px pink;
+        }
+        .search-wrapper{
+            border: 1px solid green;
+            border-radius: 30px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        .search-wrapper span{
+            display: inline-block;
+            padding: 0rem 1rem;
+            font-size: 1.5rem;
+        }
+        .search-wrapper input{
+            height: 100%;
+            padding: .5rem;
+            border: none;
+            outline: none;
+        }
+        .user-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .user-wrapper img{
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        #nav-toggle{
+            display: none;
+        }
+        #nav-toggle:checked +.sidebar {
+            width: 70px;
+        }
+        #nav-toggle:checked +.sidebar .sidebar-brand,
+        #nav-toggle:checked +.sidebar li {
+            padding-left: 1rem;
+            text-align: center;
+        }
+        #nav-toggle:checked +.sidebar li a{
+            padding-left: 0rem;
+        }
+        #nav-toggle:checked +.sidebar li a span{
+            padding-right: 1rem;
+        }
+        #nav-toggle:checked +.sidebar .sidebar-brand h2 span:last-child,
+        #nav-toggle:checked +.sidebar li a span:last-child {
+            display: none;
+        }
+        #nav-toggle:checked~ .main-content{
+            margin-left: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h1><span class="lab la-accusoft"></span>Accusoft</h1>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-users"></span><span>Coustumers</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-igloo"></span><span>live class</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard"></span><span>Assignment</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard"></span><span>Demos</span></a>
+                </li>
+              
+                <li>
+                    <a href=""><span class="las la-clipboard-list"></span><span>Accounts</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-receipt"></span><span>Order</span></a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>
+            <div class="header-title">
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+            </div>
+            Dashboard
+        </h1>
+        <div class="search-wrapper">
+            <span class="las la-search"></span>
+                <input type="search" placeholder="search here">
+            
+        </div>
+        <div class="user-wrapper">
+            <img src="images.jpeg" alt="" width="40px" height="30px">
+        </div>
+        <h4>john Doe</h4>
+        <small>Super Admin</small>
+        </header>
+        <main>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Coustumers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Projects</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>124</h1>
+                        <span>Coustumers</span>
+                    </div>
+                    <div>
+                        <span class="las la-shoping-bag"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>6$</h1>
+                        <span>Coustumers</span>
+                    </div>
+                    <div>
+                        <span class="las la-google-wallet"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
